@@ -363,7 +363,7 @@ $: {
                     <span class='flex w-full gap-2 text-ellipsis whitespace-nowrap'>
                       {#each splitOptionOnWord(option) as word, wordIndex}
                         <span class={cx('inline-block', {
-                          'w-5 text-gray-800': hasPrefix && wordIndex === 0,
+                          'text-gray-800': hasPrefix && wordIndex === 0,
                         })}>
                           {#each [...word] as token}
                             <span class={cx({
@@ -377,7 +377,7 @@ $: {
                   {:else if hasPrefix}
                     {#each splitOptionOnWord(option) as optionPart, optionPartIndex (optionPart)}
                       <span
-                        class={optionPartIndex === 0 ? 'text-gray-800 w-5' : ''}
+                        class={optionPartIndex === 0 ? 'text-gray-800' : ''}
                       >
                         { optionPart }
                       </span>
